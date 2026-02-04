@@ -24,13 +24,13 @@ function verificarHorario(dataHora) {
         return "FORA do horário de funcionamento (Fim de semana).";
     }
     
-    let inicio = 8 * 60; // 08:00
+    let inicio = 8 * 60;
     let fim;
     
     if (diaSemana >= 1 && diaSemana <= 4) { 
-        fim = 20 * 60; // 20:00
+        fim = 20 * 60;
     } else if (diaSemana === 5) { 
-        fim = 19 * 60; // 19:00
+        fim = 19 * 60;
     }
     
     if (tempoAtualEmMinutos >= inicio && tempoAtualEmMinutos < fim) {
@@ -43,3 +43,4 @@ function verificarHorario(dataHora) {
 const agora = new Date();
 console.log(`Data/Hora: ${agora.toLocaleString('pt-BR')}`);
 console.log(`Resultado: ${verificarHorario(agora)}`);
+
